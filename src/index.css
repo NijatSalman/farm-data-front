@@ -5,9 +5,90 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  align-content: center;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+}
+
+#form {
+  display: flex;
+  flex-direction: row;
+  background-color: #F9E4D4;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+/* #form div {
+  margin: 5px 0;
+} */
+
+#form-title {
+  margin: 0;
+  padding: 0;
+}
+
+#form-submission {
+  margin-top: 20px;
+}
+
+#table {
+  margin: 10px;
+}
+
+#pageInput {
+  width: 50px;
+  border-radius: 2PX;
+  margin: 15px;
+  padding: 5px;
+  border: 1px solid black
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  padding: 0px;
+  /* margin: 10px 10px; */
+  border: 1px solid black;
+  font-size: 5px;
+}
+
+#table-button {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: 0 100px;
+  justify-content: space-between;
+}
+
+#table-input {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: 0;
+  justify-content: space-between;
+}
+#table-buttons {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
 }
