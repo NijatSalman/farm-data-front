@@ -6,8 +6,6 @@ export const Table=()=>{
     const [offset,setOffset]=useState(0);
     const [pageSize,setPageSize]=useState(10);
     const [totalPages,setTotalPages]=useState();
-    const [sensorType,setSensorType]=useState(null);
-    const [months,setMonths]=useState([]);
     const [farmData,setFarmData]=useState([]);
     const [isLoading, setLoading] = useState(true);
     const [currentPage,setCurrentPage]=useState(offset+1);
@@ -17,16 +15,7 @@ export const Table=()=>{
         const getFarmData = async () => {
             let res=[];
           try {
-              console.log("i am here");
-              if(months.length===0 && sensorType===null){
                 res=await axios.get(`/select/${offset}/${pageSize}`);
-              }else if(months.length===0){
-                res = await axios.get(`/select/${offset}/${pageSize}?sensorType=${sensorType}`);
-              }else if(sensorType===null){
-                res = await axios.get(`/select/${offset}/${pageSize}?months=${months}`);
-              }else{
-                res = await axios.get(`/select/${offset}/${pageSize}?sensorType=${sensorType}&months=${months}`);
-              }
             setFarmData(res.data);
             setTotalPages(res.data.totalPages);
             setLoading(false);
@@ -48,7 +37,6 @@ export const Table=()=>{
     };
 
     const showNextPage = async (event) => {
-        let prevPage = 1
         if(currentPage < totalPages){
             setOffset(currentPage+1);
             setCurrentPage(currentPage+1);

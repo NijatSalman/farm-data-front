@@ -14,7 +14,6 @@ const handleSubmit = async (event) => {
   event.preventDefault()
   const formData = new FormData();
   formData.append("file", selectedFile);
-  console.log(formData)
   try {
     setLoading(true);
     const response = await axios({
@@ -37,7 +36,6 @@ const handleSubmit = async (event) => {
 
 const handleFileSelect = (event) => {
   setSelectedFile(event.target.files[0])
-  console.log(event.target.files[0])
   setVisibleSubmit('')
 }
 
