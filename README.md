@@ -5,7 +5,6 @@ Displaying data from different farms.
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Prerequisites](#prerequisites)
-* [Run](#run)
 
 ## General info
 This project aims to upload CSV files and filter with different granularities for processing. Client-side of the project is developed using ReactJS framework. There are form and table features in the particular project. The more detailed info can be found below.
