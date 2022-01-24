@@ -23,6 +23,7 @@ At first, Node should be installed in the machine. Then React has to be download
 ```
 npm i react
 
+
 ## Run
 To run this project:
 ```
