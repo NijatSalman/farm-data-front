@@ -26,6 +26,5 @@ npm i react
 
 ## Run
 To run this project:
-```
-npm start
+
 
